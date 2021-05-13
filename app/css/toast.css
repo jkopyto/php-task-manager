@@ -1,0 +1,39 @@
+:root {
+	--toast-border-radius: .5rem;
+	--toast-offset: 100px;
+}
+
+.toasts-container {
+	position: fixed;
+	top: 1rem;
+    right: 0;
+    left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 10000;
+    background: transparent;
+}
+
+.toast {
+	position: relative;
+    opacity: 0;
+    transform: translateY(100px);
+	margin-bottom: .5rem;
+}
+
+.toast .toast--wrap {
+    padding: 1rem;
+    border-radius: .5rem;
+    min-width: 250px;
+    text-align: center;
+    color: #fff
+}
+
+.toast.toast--success .toast--wrap {
+    background: #0f9960;
+}
+
+.toast.toast--error .toast--wrap {
+    background: #db3737;
+}
