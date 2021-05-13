@@ -6,12 +6,12 @@ include('config/constants.php');
 <html>
 <head>
     <title>Twój osobisty menadżer zadań</title>
-    <link rel="stylesheet" href="<?php echo SITEURL; ?>css/style.css" />
-    <link rel="icon" type="image/svg+xml" href="<?php echo SITEURL; ?>media/favicon.svg">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php echo SITEURL; ?>css/toast.css" />
+    <link rel="stylesheet" href="css/toast.css" />
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="<?php echo SITEURL; ?>js/toast.js"></script>
 </head>
@@ -108,8 +108,8 @@ include('config/constants.php');
                                 <td><?php echo $list_name; ?></td>
                                 <td><?php echo $list_description; ?></td>
                                 <td>
-                                    <a class="btn btn-primary" href="<?php echo SITEURL; ?>update-list.php?list_id=<?php echo $list_id; ?>">Zaktualizuj</a>
-                                    <a class="btn btn-danger" href="<?php echo SITEURL; ?>delete-list.php?list_id=<?php echo $list_id; ?>">Usuń</a>
+                                    <a class="btn btn-primary" href="update-list.php?list_id=<?php echo $list_id; ?>">Zaktualizuj</a>
+                                    <a class="btn btn-danger" href="delete-list.php?list_id=<?php echo $list_id; ?>">Usuń</a>
                                 </td>
                             </tr>
 

@@ -9,8 +9,8 @@ $list_id_url = $_GET['list_id'];
 
 <head>
     <title>Twój osobisty menadżer zadań</title>
-    <link rel="stylesheet" href="<?php echo SITEURL; ?>css/style.css" />
-    <link rel="icon" type="image/svg+xml" href="<?php echo SITEURL; ?>media/favicon.svg">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -19,7 +19,7 @@ $list_id_url = $_GET['list_id'];
     <div class="wrapper">
         <h1>Menadżer zadań</h1>
         <div class="subheader-tabs">
-            <a class="subheader-item" href="<?php echo SITEURL; ?>">Wszystkie zadania</a>
+            <a class="subheader-item" href="">Wszystkie zadania</a>
 
             <?php
             //Połączenie z bazą danych
@@ -42,7 +42,7 @@ $list_id_url = $_GET['list_id'];
                     $list_name = $row['list_name'];
             ?>
 
-                    <a class="subheader-item <?php echo isset($_GET['list_id']) && $_GET['list_id'] == $list_id ? "subheader-item--active" : "" ?>" href="<?php echo SITEURL; ?>list-task.php?list_id=<?php echo $list_id; ?>"><?php echo $list_name; ?></a>
+                    <a class="subheader-item <?php echo isset($_GET['list_id']) && $_GET['list_id'] == $list_id ? "subheader-item--active" : "" ?>" href="list-task.php?list_id=<?php echo $list_id; ?>"><?php echo $list_name; ?></a>
 
             <?php
 
@@ -106,8 +106,8 @@ $list_id_url = $_GET['list_id'];
                                     <td><?php echo $priority; ?></td>
                                     <td><?php echo $deadline; ?></td>
                                     <td>
-                                        <a class="btn btn-primary" href="<?php echo SITEURL; ?>update-task.php?task_id=<?php echo $task_id; ?>">Zaktualizuj</a>
-                                        <a class="btn btn-danger" href="<?php echo SITEURL; ?>delete-task.php?task_id=<?php echo $task_id; ?>&list_id=<?php echo $list_id_url;?>">Usuń</a>
+                                        <a class="btn btn-primary" href="update-task.php?task_id=<?php echo $task_id; ?>">Zaktualizuj</a>
+                                        <a class="btn btn-danger" href="delete-task.php?task_id=<?php echo $task_id; ?>&list_id=<?php echo $list_id_url;?>">Usuń</a>
                                     </td>
                                 </tr>
                             <?php
@@ -133,12 +133,12 @@ $list_id_url = $_GET['list_id'];
 <script>
     const btnListManagement = document.getElementById("btn-list-management")
     btnListManagement.addEventListener("click", function() {
-        window.location.href="<?php echo SITEURL; ?>manage-list.php"
+        window.location.href="manage-list.php"
     })
 
     const btnAddTask = document.getElementById("btn-add-task")
     btnAddTask.addEventListener("click", function(){
-        document.location.href="<?php echo SITEURL; ?>add-task.php"
+        document.location.href="add-task.php"
     })
 </script>
 </html>

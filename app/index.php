@@ -19,23 +19,23 @@ include('config/constants.php');
 
     <!-- OpenGraph meta tagi pozwalają dopasować to jak strona jest widoczna, kiedy zostanie udostępniona jako odnośnik (np. na facebooku) -->
     <meta property="og:description" content="Prosty i przejrzysty menadżer zadań pozwoli Ci w łatwy sposób zorganizować Twoje najbliższe dni. Dzięki niemu o niczym nie zapomnisz" />
-    <meta property="og:url" content="http://localhost/" />
+    <meta property="og:url" content="https://pai.jkopyto.pl/" />
     <meta property="og:title" content="Prosty i przejrzysty menadżer zadań pozwoli Ci w łatwy sposób zorganizować Twoje najbliższe dni. Dzięki niemu o niczym nie zapomnisz" />
 
     <!-- Tytuł widoczny na pasku przeglądarki -->
     <title>Twój osobisty menadżer zadań</title>
 
     <!-- Lokalny arkusz styli -->
-    <link rel="stylesheet" href="<?php echo SITEURL; ?>css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Ikona widoczna na pasku przeglądarki -->
-    <link rel="icon" type="image/svg+xml" href="<?php echo SITEURL; ?>media/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
 
     <!-- Pobranie i załadowanie fontu -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- Arkusz styli odpowiadający za style toastu -->
-    <link rel="stylesheet" href="<?php echo SITEURL; ?>css/toast.css" />
+    <link rel="stylesheet" href="css/toast.css" />
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 
     <!-- Skrypt pozwalający na wyświetlenie toastu -->
@@ -46,7 +46,7 @@ include('config/constants.php');
     <div class="wrapper">
         <h1>Menadżer zadań</h1>
         <div class="subheader-tabs">
-            <a class="subheader-item <?php echo isset($_GET['list_id']) ? "" : "subheader-item--active" ?>" href="<?php echo SITEURL; ?>">Wszystkie zadania</a>
+            <a class="subheader-item <?php echo isset($_GET['list_id']) ? "" : "subheader-item--active" ?>" href="">Wszystkie zadania</a>
 
             <?php
 
@@ -70,7 +70,7 @@ include('config/constants.php');
                     $list_name = $row2['list_name'];
             ?>
 
-                    <a class="subheader-item <?php echo isset($_GET['list_id']) && $_GET['list_id'] == $list_id ? "subheader-item--active" : "" ?>" href="<?php echo SITEURL; ?>list-task.php?list_id=<?php echo $list_id; ?>"><?php echo $list_name; ?></a>
+                    <a class="subheader-item <?php echo isset($_GET['list_id']) && $_GET['list_id'] == $list_id ? "subheader-item--active" : "" ?>" href="list-task.php?list_id=<?php echo $list_id; ?>"><?php echo $list_name; ?></a>
 
             <?php
 
@@ -164,9 +164,9 @@ include('config/constants.php');
                                     <td><?php echo $priority; ?></td>
                                     <td><?php echo $deadline; ?></td>
                                     <td>
-                                        <a class="btn btn-primary" href="<?php echo SITEURL; ?>update-task.php?task_id=<?php echo $task_id; ?>">Zaktualizuj </a>
+                                        <a class="btn btn-primary" href="update-task.php?task_id=<?php echo $task_id; ?>">Zaktualizuj </a>
 
-                                        <a class="btn btn-danger" href="<?php echo SITEURL; ?>delete-task.php?task_id=<?php echo $task_id; ?>">Usuń</a>
+                                        <a class="btn btn-danger" href="delete-task.php?task_id=<?php echo $task_id; ?>">Usuń</a>
 
                                     </td>
                                 </tr>
@@ -198,7 +198,7 @@ include('config/constants.php');
 <script>
     const btnTaskManagement = document.getElementById("btn-task-management")
     btnTaskManagement.addEventListener("click", function() {
-        window.location.href="<?php echo SITEURL; ?>manage-list.php"
+        window.location.href="manage-list.php"
     })
 
     const btnAddTask = document.getElementById("btn-add-task")

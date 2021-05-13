@@ -5,8 +5,8 @@ include('config/constants.php');
 <html>
 <head>
     <title>Twój osobisty menadżer zadań</title>
-    <link rel="stylesheet" href="<?php echo SITEURL; ?>css/style.css" />
-    <link rel="icon" type="image/svg+xml" href="<?php echo SITEURL; ?>media/favicon.svg">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">

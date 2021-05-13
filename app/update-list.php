@@ -74,12 +74,12 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
     <title>Twój osobisty menadżer zadań</title>
-    <link rel="stylesheet" href="<?php echo SITEURL; ?>css/style.css" />
-    <link rel="icon" type="image/svg+xml" href="<?php echo SITEURL; ?>media/favicon.svg">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php echo SITEURL; ?>css/toast.css" />
+    <link rel="stylesheet" href="css/toast.css" />
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="<?php echo SITEURL; ?>js/toast.js"></script>
 </head>
@@ -127,12 +127,12 @@ if (isset($_POST['submit'])) {
 <script>
     const btnMainPage = document.getElementById("btn-main-page")
     btnMainPage.addEventListener("click", function() {
-        window.location.href="<?php echo SITEURL; ?>"
+        window.location.href=""
     })
 
     const btnManageList = document.getElementById("btn-manage-list")
     btnManageList.addEventListener("click", function() {
-        window.location.href="<?php echo SITEURL; ?>manage-list.php"
+        window.location.href="manage-list.php"
     })
 </script>
 </html>
