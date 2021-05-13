@@ -39,7 +39,7 @@ include('config/constants.php');
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 
     <!-- Skrypt pozwalający na wyświetlenie toastu -->
-    <script src="<?php echo SITEURL; ?>js/toast.js"></script>
+    <script src="js/toast.js"></script>
 </head>
 <body>
     <div class = "toasts-container"></div>

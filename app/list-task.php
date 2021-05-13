@@ -19,7 +19,7 @@ $list_id_url = $_GET['list_id'];
     <div class="wrapper">
         <h1>Menadżer zadań</h1>
         <div class="subheader-tabs">
-            <a class="subheader-item" href="">Wszystkie zadania</a>
+            <a class="subheader-item" href=<?php echo SITEURL; ?>>Wszystkie zadania</a>
 
             <?php
             //Połączenie z bazą danych

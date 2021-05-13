@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
 
     <link rel="stylesheet" href="css/toast.css" />
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-    <script src="<?php echo SITEURL; ?>js/toast.js"></script>
+    <script src="js/toast.js"></script>
 </head>
 
 <body>
